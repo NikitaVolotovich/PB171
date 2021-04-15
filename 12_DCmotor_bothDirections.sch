@@ -1,0 +1,133 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4200 4200 4600 4200
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px MCU
+U 1 1 60780D6F
+P 4600 3400
+F 0 "MCU" H 4600 2511 50  0000 C CNN
+F 1 "STM32F030F4Px" H 4600 2420 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4200 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 4600 3400 50  0001 C CNN
+	1    4600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60815819
+P 4200 4200
+F 0 "#PWR?" H 4200 3950 50  0001 C CNN
+F 1 "GND" H 4205 4027 50  0000 C CNN
+F 2 "" H 4200 4200 50  0001 C CNN
+F 3 "" H 4200 4200 50  0001 C CNN
+	1    4200 4200
+	1    0    0    -1  
+$EndComp
+Text Notes 5100 3600 0    50   ~ 0
+PWM TIM3_Ch2\n
+Text Notes 5100 3700 0    50   ~ 0
+PWM TIM1_Ch2\n
+$Comp
+L power:+3.3V #PWR?
+U 1 1 608CD99D
+P 4600 2700
+F 0 "#PWR?" H 4600 2550 50  0001 C CNN
+F 1 "+3.3V" H 4615 2873 50  0000 C CNN
+F 2 "" H 4600 2700 50  0001 C CNN
+F 3 "" H 4600 2700 50  0001 C CNN
+	1    4600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3600 5800 3600
+$Comp
+L Motor:Motor_DC M1
+U 1 1 608D64C1
+P 6950 3500
+F 0 "M1" H 7108 3496 50  0000 L CNN
+F 1 "ROB_11696" H 7108 3405 50  0000 L CNN
+F 2 "" H 6950 3410 50  0001 C CNN
+F 3 "~" H 6950 3410 50  0001 C CNN
+	1    6950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 608DD242
+P 5500 3250
+F 0 "#PWR?" H 5500 3100 50  0001 C CNN
+F 1 "+3.3V" H 5515 3423 50  0000 C CNN
+F 2 "" H 5500 3250 50  0001 C CNN
+F 3 "" H 5500 3250 50  0001 C CNN
+	1    5500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 608DF284
+P 5750 3250
+F 0 "#PWR?" H 5750 3000 50  0001 C CNN
+F 1 "GND" H 5755 3077 50  0000 C CNN
+F 2 "" H 5750 3250 50  0001 C CNN
+F 3 "" H 5750 3250 50  0001 C CNN
+	1    5750 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 3700 5100 3700
+$Comp
+L Driver_Motor:TA6586 U1
+U 1 1 608F2A0F
+P 6150 3550
+F 0 "U1" H 6150 2987 50  0000 C CNN
+F 1 "TA6586" H 6150 3078 50  0000 C CNN
+F 2 "" H 6050 3800 50  0001 C CNN
+F 3 "" H 6050 3800 50  0001 C CNN
+	1    6150 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5750 3500 5800 3500
+Wire Wire Line
+	5750 3250 5750 3500
+Wire Wire Line
+	5500 3250 5500 3400
+Wire Wire Line
+	5500 3400 5800 3400
+Wire Wire Line
+	6500 3400 6500 3450
+Wire Wire Line
+	6500 3450 6700 3450
+Wire Wire Line
+	6700 3450 6700 3300
+Wire Wire Line
+	6700 3300 6950 3300
+Connection ~ 6500 3450
+Wire Wire Line
+	6500 3450 6500 3500
+Wire Wire Line
+	6500 3600 6500 3650
+Wire Wire Line
+	6500 3650 6700 3650
+Wire Wire Line
+	6700 3650 6700 3800
+Wire Wire Line
+	6700 3800 6950 3800
+Connection ~ 6500 3650
+Wire Wire Line
+	6500 3650 6500 3700
+$EndSCHEMATC

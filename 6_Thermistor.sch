@@ -1,0 +1,163 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4200 4200 4600 4200
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px MCU
+U 1 1 60780D6F
+P 4600 3400
+F 0 "MCU" H 4600 2511 50  0000 C CNN
+F 1 "STM32F030F4Px" H 4600 2420 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4200 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 4600 3400 50  0001 C CNN
+	1    4600 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2450 4600 2700
+$Comp
+L power:GND #PWR?
+U 1 1 6080179D
+P 3750 3050
+F 0 "#PWR?" H 3750 2800 50  0001 C CNN
+F 1 "GND" H 3755 2877 50  0000 C CNN
+F 2 "" H 3750 3050 50  0001 C CNN
+F 3 "" H 3750 3050 50  0001 C CNN
+	1    3750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM317L_SO8 U1
+U 1 1 6080283E
+P 3150 2450
+F 0 "U1" H 3150 2692 50  0000 C CNN
+F 1 "LM317" H 3150 2601 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3150 2650 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 3150 2250 50  0001 C CNN
+	1    3150 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2450 2850 2450
+$Comp
+L power:VCC #PWR?
+U 1 1 60807312
+P 2600 2450
+F 0 "#PWR?" H 2600 2300 50  0001 C CNN
+F 1 "VCC" H 2615 2623 50  0000 C CNN
+F 2 "" H 2600 2450 50  0001 C CNN
+F 3 "" H 2600 2450 50  0001 C CNN
+	1    2600 2450
+	1    0    0    -1  
+$EndComp
+Text Label 2450 2250 0    50   ~ 0
++7-12V
+$Comp
+L Device:R R1
+U 1 1 608096D0
+P 3750 2600
+F 0 "R1" H 3820 2646 50  0000 L CNN
+F 1 "240" H 3820 2555 50  0000 L CNN
+F 2 "" V 3680 2600 50  0001 C CNN
+F 3 "~" H 3750 2600 50  0001 C CNN
+	1    3750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6080AA7F
+P 3750 2900
+F 0 "R2" H 3820 2946 50  0000 L CNN
+F 1 "2.4k" H 3820 2855 50  0000 L CNN
+F 2 "" V 3680 2900 50  0001 C CNN
+F 3 "~" H 3750 2900 50  0001 C CNN
+	1    3750 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2750 3750 2750
+$Comp
+L Device:R R3
+U 1 1 6080E6FC
+P 3600 2450
+F 0 "R3" V 3393 2450 50  0000 C CNN
+F 1 "0.2" V 3484 2450 50  0000 C CNN
+F 2 "" V 3530 2450 50  0001 C CNN
+F 3 "~" H 3600 2450 50  0001 C CNN
+	1    3600 2450
+	0    1    1    0   
+$EndComp
+Connection ~ 3750 2750
+$Comp
+L power:GND #PWR?
+U 1 1 60815819
+P 4200 4200
+F 0 "#PWR?" H 4200 3950 50  0001 C CNN
+F 1 "GND" H 4205 4027 50  0000 C CNN
+F 2 "" H 4200 4200 50  0001 C CNN
+F 3 "" H 4200 4200 50  0001 C CNN
+	1    4200 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2450 4600 2450
+Connection ~ 3750 2450
+Text Notes 4050 2400 0    50   ~ 0
+3.3V\n
+Text Label 5150 2900 0    50   ~ 0
+ADC1_IN0
+Connection ~ 4600 2450
+Wire Wire Line
+	5550 2450 4600 2450
+Wire Wire Line
+	5550 2500 5550 2450
+$Comp
+L power:GND #PWR?
+U 1 1 60824737
+P 5550 3200
+F 0 "#PWR?" H 5550 2950 50  0001 C CNN
+F 1 "GND" H 5555 3027 50  0000 C CNN
+F 2 "" H 5550 3200 50  0001 C CNN
+F 3 "" H 5550 3200 50  0001 C CNN
+	1    5550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60823CC9
+P 5550 3050
+F 0 "R4" H 5620 3096 50  0000 L CNN
+F 1 "47k" H 5620 3005 50  0000 L CNN
+F 2 "" V 5480 3050 50  0001 C CNN
+F 3 "~" H 5550 3050 50  0001 C CNN
+	1    5550 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2900 5100 2900
+Connection ~ 5550 2900
+$Comp
+L Device:Thermistor TH1
+U 1 1 6082217C
+P 5550 2700
+F 0 "TH1" H 5655 2746 50  0000 L CNN
+F 1 "NTCLE100E3(101)B0" H 5655 2655 50  0000 L CNN
+F 2 "" H 5550 2700 50  0001 C CNN
+F 3 "~" H 5550 2700 50  0001 C CNN
+	1    5550 2700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
