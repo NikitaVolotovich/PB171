@@ -12,7 +12,7 @@ Output pin; PA0.
 I = 20 mA
 R = (U - Uled) / I = (3.3 - 0.6(falling)) / 0.020 = 135 Om
 https://www.amazon.com/50-0402-SMD-Blue-Bright/dp/B017TR4VM4
-![](1_LED.png)
+![Schematics](1_LED.png)
 
 # 2
 Pull-up mode
