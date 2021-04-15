@@ -16,7 +16,7 @@ https://www.amazon.com/50-0402-SMD-Blue-Bright/dp/B017TR4VM4
 
 # 2
 Pull-up mode
-![Schematics](2_Btn&Switch.png)
+![Schematics](2_Btn&Siwtch.png)
 # 3
 ![Schematics](3_Btn&LED.png)
 # 4
