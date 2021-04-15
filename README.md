@@ -30,24 +30,23 @@ Max input voltage 12 V divide to 3.3 V and using ADC I can calculate input volta
 Or not ?
 Vout = (Vin * R2) / (R1 + R2)
 Vin = 12V , R1 = 1000, Vout = 3.3V, R2 = 380
-If (Vin == 12V) => ADC = 4095
+If (Vin == 12V) => ADC = 4095.
 
 # 8
 3-wire https://www.sparkfun.com/datasheets/Components/LED/YSL-R596CR4G3B5W-F12.pdf
 and 
 1-wire RGB LED (WS2812b) https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
-Common cathode (-)
+Common cathode (-).
 
 # 2.3 Schematics with high power consumption
 # 9
 Brushless motor: https://hobbyking.com/en_us/turnigy-aerodrive-sk3-2826-980kv-brushless-outrunner-motor-1.html
 Motor driver: https://hobbyking.com/en_us/aerostar-20a-electronic-speed-controller-with-2a-bec-2-4s.html
 Driver was drawn by myself.
-Common cathode (-)
 
 # 10
 Servo motor datasheet: https://github.com/microrobotics/DS3235-270/blob/master/DS3235-270_datasheet.pdf
-2S Li-on battery parallel = 7.4V
+2S Li-on battery parallel = 7.4V.
 Only 6 servo motors controlled by PWM is possible to connect to STM32F030F4 because only 6 PWM pins exists on this version MCU.
 
 # 11
@@ -56,7 +55,7 @@ When using MOSFET it’s necessary to use did, because the inductive surge from 
 
 # 12
 For both directions I use simple modern chip TA6586: https://datasheet.lcsc.com/szlcsc/1809091025_RZ-Wuxi-Smart-Microelectronics-TA6586_C128851.pdf
-I works in voltage 3-14 V and max current 7A
+I works in voltage 3-14 V and max current 7A.
 
 # 13
 Oh, I almost done it in ‘9’ o_O
