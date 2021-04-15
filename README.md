@@ -1,8 +1,8 @@
 # PB171
 Schematics and project
 
-Schematics:
-# 2.2
+# Schematics:
+# 2.2 Basic schematics
 # 1
 1) STM32F030F4:
 VDD: 3.3 V,
@@ -38,6 +38,7 @@ and
 1-wire RGB LED (WS2812b) https://cdn-shop.adafruit.com/datasheets/WS2812.pdf
 Common cathode (-)
 
+# 2.3 Schematics with high power consumption
 # 9
 Brushless motor: https://hobbyking.com/en_us/turnigy-aerodrive-sk3-2826-980kv-brushless-outrunner-motor-1.html
 Motor driver: https://hobbyking.com/en_us/aerostar-20a-electronic-speed-controller-with-2a-bec-2-4s.html
