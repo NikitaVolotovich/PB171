@@ -1,17 +1,21 @@
 # PB171
 Schematics and project
 
+
 # Schematics:
+
+MCU datasheet: https://www.st.com/en/microcontrollers-microprocessors/stm32f030f4.html#documentation
+Regulator datasheet: https://www.google.com/url?sa=i&url=https%3A%2F%2Fpajenicko.cz%2Findex.php%3Froute%3Dproduct%2Fproduct%2Fget_file%26file%3Dams1117.pdf&psig=AOvVaw3BL6uwJyzgqzHhspaz3xXs&ust=1618701084359000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCMD_iM3xg_ACFQAAAAAdAAAAABAD
+Electrolytic capacitor in parallel supply MCU datasheet: https://cz.mouser.com/datasheet/2/977/e_YXS-1600637.pdf
+
+Updated&Corrected 17.04
+
 # 2.2 Basic schematics
 # 1
-1) STM32F030F4:
-VDD: 3.3 V,
-Output pin; PA0.
-2) AMS1117 regulator for stabilize voltage from 5V to 3.3V 
-3) LED SMD 0402 body, 3.3V
-I = 20 mA
-R = (U - Uled) / I = (3.3 - 0.6(falling)) / 0.020 = 135 Om
-https://www.amazon.com/50-0402-SMD-Blue-Bright/dp/B017TR4VM4
+Blue led: https://datasheet.lcsc.com/szlcsc/1810181751_TOGIALED-TJ-S3210SW5TGLC6B-A5_C273631.pdf
+MCU output voltage is 3.3 V, so maybe it's not necessary to use resistor?? 
+For example MCU output = 3.3 V, LED preffered voltage = 3.0 V, LED current = 0.020 A. 
+R = (U - Uled) / I = (3.3 - 3.0) / 0.020 = 15 Om
 ![Schematics](1_LED.png)
 
 # 2
