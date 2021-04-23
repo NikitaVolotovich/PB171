@@ -78,7 +78,7 @@ $EndComp
 Text Notes 4050 2400 0    50   ~ 0
 3.3V\n
 Wire Wire Line
-	3750 2450 4600 2450
+	3750 2450 4100 2450
 $Comp
 L Device:Battery_Cell BT?
 U 1 1 60858B57
@@ -205,4 +205,22 @@ F 3 "" H 1450 4150 50  0001 C CNN
 	1    1450 4300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R3
+U 1 1 608397C4
+P 4100 2650
+F 0 "R3" H 4170 2696 50  0000 L CNN
+F 1 "100K" H 4170 2605 50  0000 L CNN
+F 2 "" V 4030 2650 50  0001 C CNN
+F 3 "~" H 4100 2650 50  0001 C CNN
+	1    4100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2500 4100 2450
+Connection ~ 4100 2450
+Wire Wire Line
+	4100 2450 4600 2450
+Wire Wire Line
+	4100 2800 4100 2900
 $EndSCHEMATC

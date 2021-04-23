@@ -63,17 +63,6 @@ F 3 "~" H 3750 2900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3150 2750 3750 2750
-$Comp
-L Device:R R3
-U 1 1 6080E6FC
-P 3600 2450
-F 0 "R3" V 3393 2450 50  0000 C CNN
-F 1 "0.2" V 3484 2450 50  0000 C CNN
-F 2 "" V 3530 2450 50  0001 C CNN
-F 3 "~" H 3600 2450 50  0001 C CNN
-	1    3600 2450
-	0    1    1    0   
-$EndComp
 Connection ~ 3750 2750
 $Comp
 L power:GND #PWR?
@@ -86,7 +75,6 @@ F 3 "" H 4200 4200 50  0001 C CNN
 	1    4200 4200
 	1    0    0    -1  
 $EndComp
-Connection ~ 3750 2450
 Text Notes 4050 2400 0    50   ~ 0
 3.3V\n
 Wire Wire Line
@@ -94,80 +82,36 @@ Wire Wire Line
 $Comp
 L Device:Battery_Cell BT?
 U 1 1 60858B57
-P 2050 2900
-F 0 "BT?" H 2168 2950 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2905 50  0001 L CNN
-F 2 "" V 2050 2960 50  0001 C CNN
-F 3 "~" V 2050 2960 50  0001 C CNN
-	1    2050 2900
+P 2000 2350
+F 0 "BT?" H 2118 2400 50  0001 L CNN
+F 1 "Battery_Cell" H 2118 2355 50  0001 L CNN
+F 2 "" V 2000 2410 50  0001 C CNN
+F 3 "~" V 2000 2410 50  0001 C CNN
+	1    2000 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:Battery_Cell BT?
 U 1 1 6085A8C5
-P 2050 2700
-F 0 "BT?" H 2168 2750 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2705 50  0001 L CNN
-F 2 "" V 2050 2760 50  0001 C CNN
-F 3 "~" V 2050 2760 50  0001 C CNN
-	1    2050 2700
+P 1700 2350
+F 0 "BT?" H 1818 2400 50  0001 L CNN
+F 1 "Battery_Cell" H 1818 2355 50  0001 L CNN
+F 2 "" V 1700 2410 50  0001 C CNN
+F 3 "~" V 1700 2410 50  0001 C CNN
+	1    1700 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:Battery_Cell BT?
 U 1 1 6085B142
-P 2050 2500
-F 0 "BT?" H 2168 2550 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2505 50  0001 L CNN
-F 2 "" V 2050 2560 50  0001 C CNN
-F 3 "~" V 2050 2560 50  0001 C CNN
-	1    2050 2500
+P 2300 2350
+F 0 "BT?" H 2418 2400 50  0001 L CNN
+F 1 "Battery_Cell" H 2418 2355 50  0001 L CNN
+F 2 "" V 2300 2410 50  0001 C CNN
+F 3 "~" V 2300 2410 50  0001 C CNN
+	1    2300 2350
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1850 2900 1750 2900
-Wire Wire Line
-	1750 2900 1750 2700
-Wire Wire Line
-	1750 2700 1850 2700
-Wire Wire Line
-	1750 2700 1750 2500
-Wire Wire Line
-	1750 2500 1850 2500
-Connection ~ 1750 2700
-Wire Wire Line
-	2150 2900 2250 2900
-Wire Wire Line
-	2250 2900 2250 2700
-Wire Wire Line
-	2250 2700 2150 2700
-Wire Wire Line
-	2250 2700 2250 2500
-Wire Wire Line
-	2250 2500 2150 2500
-Connection ~ 2250 2700
-$Comp
-L Motor:Stepper_Motor_unipolar_6pin M1
-U 1 1 608674B5
-P 1450 4250
-F 0 "M1" H 1638 4374 50  0000 L CNN
-F 1 "Aerodrive SK3 2826" H 1638 4283 50  0000 L CNN
-F 2 "" H 1460 4240 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 1460 4240 50  0001 C CNN
-	1    1450 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1150 4150 1000 4150
-Wire Wire Line
-	1000 4150 1000 4250
-Wire Wire Line
-	1000 4250 1150 4250
-Wire Wire Line
-	1000 4250 1000 4350
-Wire Wire Line
-	1000 4350 1150 4350
-Connection ~ 1000 4250
 $Comp
 L Driver_Motor:SK3_2826 U2
 U 1 1 60870A13
@@ -230,25 +174,35 @@ F 3 "" H 3150 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2700 1650 2700
-Wire Wire Line
-	1650 3200 2850 3200
-Wire Wire Line
 	2850 3200 2850 3350
 Wire Wire Line
-	1650 2700 1650 3200
-Wire Wire Line
-	2250 2700 2350 2700
-Wire Wire Line
-	2350 2700 2350 3100
-Wire Wire Line
-	2350 3100 2950 3100
-Wire Wire Line
 	2950 3100 2950 3350
-Text Label 2300 2650 0    50   ~ 0
+Text Label 2400 2200 0    50   ~ 0
 B-
-Text Label 1600 2650 0    50   ~ 0
+Text Label 1400 2200 0    50   ~ 0
 B+
-Text Label 1350 2800 0    50   ~ 0
+Text Label 1250 2300 0    50   ~ 0
 +11.1V
+Connection ~ 3750 2450
+Wire Wire Line
+	3450 2450 3750 2450
+Wire Wire Line
+	1500 2350 1500 3200
+Wire Wire Line
+	1500 3200 2850 3200
+Wire Wire Line
+	2400 2350 2400 3100
+Wire Wire Line
+	2400 3100 2950 3100
+$Comp
+L Motor:Motor M1
+U 1 1 609993F7
+P 1450 4300
+F 0 "M1" H 1608 4489 50  0000 L CNN
+F 1 "Aerodrive SK3 2826" H 1608 4398 50  0000 L CNN
+F 2 "" H 1450 4150 50  0001 C CNN
+F 3 "" H 1450 4150 50  0001 C CNN
+	1    1450 4300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
