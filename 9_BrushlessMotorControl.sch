@@ -30,53 +30,6 @@ Wire Wire Line
 	4600 2450 4600 2700
 $Comp
 L power:GND #PWR?
-U 1 1 6080179D
-P 3750 3050
-F 0 "#PWR?" H 3750 2800 50  0001 C CNN
-F 1 "GND" H 3755 2877 50  0000 C CNN
-F 2 "" H 3750 3050 50  0001 C CNN
-F 3 "" H 3750 3050 50  0001 C CNN
-	1    3750 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 608096D0
-P 3750 2600
-F 0 "R1" H 3820 2646 50  0000 L CNN
-F 1 "240" H 3820 2555 50  0000 L CNN
-F 2 "" V 3680 2600 50  0001 C CNN
-F 3 "~" H 3750 2600 50  0001 C CNN
-	1    3750 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 6080AA7F
-P 3750 2900
-F 0 "R2" H 3820 2946 50  0000 L CNN
-F 1 "2.4k" H 3820 2855 50  0000 L CNN
-F 2 "" V 3680 2900 50  0001 C CNN
-F 3 "~" H 3750 2900 50  0001 C CNN
-	1    3750 2900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3150 2750 3750 2750
-$Comp
-L Device:R R3
-U 1 1 6080E6FC
-P 3600 2450
-F 0 "R3" V 3393 2450 50  0000 C CNN
-F 1 "0.2" V 3484 2450 50  0000 C CNN
-F 2 "" V 3530 2450 50  0001 C CNN
-F 3 "~" H 3600 2450 50  0001 C CNN
-	1    3600 2450
-	0    1    1    0   
-$EndComp
-Connection ~ 3750 2750
-$Comp
-L power:GND #PWR?
 U 1 1 60815819
 P 4200 4200
 F 0 "#PWR?" H 4200 3950 50  0001 C CNN
@@ -86,169 +39,206 @@ F 3 "" H 4200 4200 50  0001 C CNN
 	1    4200 4200
 	1    0    0    -1  
 $EndComp
-Connection ~ 3750 2450
 Text Notes 4050 2400 0    50   ~ 0
 3.3V\n
-Wire Wire Line
-	3750 2450 4600 2450
+Text Notes 5150 3250 0    50   ~ 0
+PWM TIM1_Ch2\n\n
 $Comp
-L Device:Battery_Cell BT?
-U 1 1 60858B57
-P 2050 2900
-F 0 "BT?" H 2168 2950 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2905 50  0001 L CNN
-F 2 "" V 2050 2960 50  0001 C CNN
-F 3 "~" V 2050 2960 50  0001 C CNN
-	1    2050 2900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:Battery_Cell BT?
-U 1 1 6085A8C5
-P 2050 2700
-F 0 "BT?" H 2168 2750 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2705 50  0001 L CNN
-F 2 "" V 2050 2760 50  0001 C CNN
-F 3 "~" V 2050 2760 50  0001 C CNN
-	1    2050 2700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:Battery_Cell BT?
-U 1 1 6085B142
-P 2050 2500
-F 0 "BT?" H 2168 2550 50  0001 L CNN
-F 1 "Battery_Cell" H 2168 2505 50  0001 L CNN
-F 2 "" V 2050 2560 50  0001 C CNN
-F 3 "~" V 2050 2560 50  0001 C CNN
-	1    2050 2500
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1850 2900 1750 2900
-Wire Wire Line
-	1750 2900 1750 2700
-Wire Wire Line
-	1750 2700 1850 2700
-Wire Wire Line
-	1750 2700 1750 2500
-Wire Wire Line
-	1750 2500 1850 2500
-Connection ~ 1750 2700
-Wire Wire Line
-	2150 2900 2250 2900
-Wire Wire Line
-	2250 2900 2250 2700
-Wire Wire Line
-	2250 2700 2150 2700
-Wire Wire Line
-	2250 2700 2250 2500
-Wire Wire Line
-	2250 2500 2150 2500
-Connection ~ 2250 2700
-$Comp
-L Motor:Stepper_Motor_unipolar_6pin M1
-U 1 1 608674B5
-P 1450 4250
-F 0 "M1" H 1638 4374 50  0000 L CNN
-F 1 "Aerodrive SK3 2826" H 1638 4283 50  0000 L CNN
-F 2 "" H 1460 4240 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 1460 4240 50  0001 C CNN
-	1    1450 4250
+L Motor:Motor_Servo M1
+U 1 1 608EDC41
+P 6200 3300
+F 0 "M1" H 6532 3365 50  0000 L CNN
+F 1 "Motor_Servo" H 6532 3274 50  0000 L CNN
+F 2 "" H 6200 3110 50  0001 C CNN
+F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 6200 3110 50  0001 C CNN
+	1    6200 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 4150 1000 4150
-Wire Wire Line
-	1000 4150 1000 4250
-Wire Wire Line
-	1000 4250 1150 4250
-Wire Wire Line
-	1000 4250 1000 4350
-Wire Wire Line
-	1000 4350 1150 4350
-Connection ~ 1000 4250
-$Comp
-L Driver_Motor:SK3_2826 U2
-U 1 1 60870A13
-P 2700 3750
-F 0 "U2" H 2700 4133 50  0000 C CNN
-F 1 "SK3_2826" H 2700 4224 50  0000 C CNN
-F 2 "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.3mm" H 2700 3200 50  0001 C CNN
-F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/A4950-Datasheet.ashx" H 2650 4200 50  0001 C CNN
-	1    2700 3750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2300 3700 1350 3700
-Wire Wire Line
-	1350 3700 1350 3950
-Wire Wire Line
-	2300 3600 1450 3600
-Wire Wire Line
-	1450 3600 1450 3950
-Wire Wire Line
-	2300 3500 1550 3500
-Wire Wire Line
-	1550 3500 1550 3950
-Wire Wire Line
-	3100 4000 4100 4000
-Text Notes 3500 4000 0    50   ~ 0
-PWM TIM3_Ch4\n
-$Comp
-L Regulator_Linear:LM317L_SO8 U1
-U 1 1 6080283E
-P 3150 2450
-F 0 "U1" H 3150 2692 50  0000 C CNN
-F 1 "LM317" H 3150 2601 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3150 2650 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 3150 2250 50  0001 C CNN
-	1    3150 2450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3100 3800 3150 3800
-Wire Wire Line
-	3150 3800 3150 3000
-Wire Wire Line
-	3150 3000 2850 3000
-Wire Wire Line
-	2850 3000 2850 2450
-Wire Wire Line
-	3100 3900 3150 3900
-Wire Wire Line
-	3150 3900 3150 4100
+	2450 2700 2450 2750
 $Comp
 L power:GND #PWR?
-U 1 1 6087FFF9
-P 3150 4100
-F 0 "#PWR?" H 3150 3850 50  0001 C CNN
-F 1 "GND" H 3155 3927 50  0000 C CNN
-F 2 "" H 3150 4100 50  0001 C CNN
-F 3 "" H 3150 4100 50  0001 C CNN
-	1    3150 4100
+U 1 1 608F7E02
+P 1900 3050
+F 0 "#PWR?" H 1900 2800 50  0001 C CNN
+F 1 "GND" H 1905 2877 50  0000 C CNN
+F 2 "" H 1900 3050 50  0001 C CNN
+F 3 "" H 1900 3050 50  0001 C CNN
+	1    1900 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 608F7E08
+P 1700 2450
+F 0 "#PWR?" H 1700 2300 50  0001 C CNN
+F 1 "+5V" H 1715 2623 50  0000 C CNN
+F 2 "" H 1700 2450 50  0001 C CNN
+F 3 "" H 1700 2450 50  0001 C CNN
+	1    1700 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2700 1650 2700
+	2750 2450 2800 2450
+Text Label 2800 2400 0    50   ~ 0
++3.3V
+$Comp
+L Device:CP1 C1
+U 1 1 608F7E10
+P 1900 2600
+F 0 "C1" H 2015 2646 50  0000 L CNN
+F 1 "10 uF" H 2015 2555 50  0000 L CNN
+F 2 "" H 1900 2600 50  0001 C CNN
+F 3 "~" H 1900 2600 50  0001 C CNN
+	1    1900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117 DA1
+U 1 1 608F7E16
+P 2450 2450
+F 0 "DA1" H 2450 2692 50  0000 C CNN
+F 1 "AMS1117" H 2450 2601 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2450 2650 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2550 2200 50  0001 C CNN
+	1    2450 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 2450
 Wire Wire Line
-	1650 3200 2850 3200
+	1900 2450 1700 2450
 Wire Wire Line
-	2850 3200 2850 3350
+	1900 2450 2150 2450
+$Comp
+L Device:R R1
+U 1 1 608F7E1F
+P 2800 2600
+F 0 "R1" H 2870 2646 50  0000 L CNN
+F 1 "130" H 2870 2555 50  0000 L CNN
+F 2 "" V 2730 2600 50  0001 C CNN
+F 3 "~" H 2800 2600 50  0001 C CNN
+	1    2800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 608F7E25
+P 2800 2900
+F 0 "R2" H 2870 2946 50  0000 L CNN
+F 1 "180" H 2870 2855 50  0000 L CNN
+F 2 "" V 2730 2900 50  0001 C CNN
+F 3 "~" H 2800 2900 50  0001 C CNN
+	1    2800 2900
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1650 2700 1650 3200
+	2800 2750 2450 2750
+Connection ~ 2800 2750
+Connection ~ 2450 2750
 Wire Wire Line
-	2250 2700 2350 2700
+	1900 2750 1900 3050
+$Comp
+L Device:CP1 C3
+U 1 1 608F7E2F
+P 3200 2750
+F 0 "C3" H 3315 2796 50  0000 L CNN
+F 1 "22 uF" H 3315 2705 50  0000 L CNN
+F 2 "" H 3200 2750 50  0001 C CNN
+F 3 "~" H 3200 2750 50  0001 C CNN
+	1    3200 2750
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2350 2700 2350 3100
+	2800 3050 3200 3050
+Connection ~ 2800 3050
+Connection ~ 2800 2450
 Wire Wire Line
-	2350 3100 2950 3100
+	2800 2450 3200 2450
+Connection ~ 1900 3050
 Wire Wire Line
-	2950 3100 2950 3350
-Text Label 2300 2650 0    50   ~ 0
-B-
-Text Label 1600 2650 0    50   ~ 0
-B+
-Text Label 1350 2800 0    50   ~ 0
-+11.1V
+	1900 3050 2800 3050
+$Comp
+L Device:C C4
+U 1 1 608F7E3B
+P 3650 2750
+F 0 "C4" H 3765 2796 50  0000 L CNN
+F 1 "470 uF" H 3765 2705 50  0000 L CNN
+F 2 "" H 3688 2600 50  0001 C CNN
+F 3 "~" H 3650 2750 50  0001 C CNN
+	1    3650 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2600 3200 2450
+Connection ~ 3200 2450
+Wire Wire Line
+	3200 2900 3200 3050
+Connection ~ 3200 3050
+Wire Wire Line
+	3650 3050 3650 2900
+Wire Wire Line
+	3200 3050 3650 3050
+Wire Wire Line
+	3650 2600 3650 2450
+Wire Wire Line
+	3200 2450 3650 2450
+Wire Wire Line
+	3650 2450 4100 2450
+Connection ~ 3650 2450
+Connection ~ 3650 3050
+Wire Wire Line
+	3650 3050 3650 4200
+Wire Wire Line
+	3650 4200 4200 4200
+Connection ~ 4200 4200
+Wire Wire Line
+	5100 3200 5900 3200
+Wire Wire Line
+	5900 3300 5800 3300
+Wire Wire Line
+	5800 3300 5800 2900
+Wire Wire Line
+	5900 3400 5800 3400
+Wire Wire Line
+	5800 3400 5800 3600
+$Comp
+L power:GND #PWR?
+U 1 1 608FB809
+P 5800 3600
+F 0 "#PWR?" H 5800 3350 50  0001 C CNN
+F 1 "GND" H 5805 3427 50  0000 C CNN
+F 2 "" H 5800 3600 50  0001 C CNN
+F 3 "" H 5800 3600 50  0001 C CNN
+	1    5800 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 608FC149
+P 5800 2900
+F 0 "#PWR?" H 5800 2750 50  0001 C CNN
+F 1 "+5V" H 5815 3073 50  0000 C CNN
+F 2 "" H 5800 2900 50  0001 C CNN
+F 3 "" H 5800 2900 50  0001 C CNN
+	1    5800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60881E9C
+P 4100 2650
+F 0 "R3" H 4170 2696 50  0000 L CNN
+F 1 "100K" H 4170 2605 50  0000 L CNN
+F 2 "" V 4030 2650 50  0001 C CNN
+F 3 "~" H 4100 2650 50  0001 C CNN
+	1    4100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2800 4100 2900
+Wire Wire Line
+	4100 2500 4100 2450
+Connection ~ 4100 2450
+Wire Wire Line
+	4100 2450 4600 2450
 $EndSCHEMATC

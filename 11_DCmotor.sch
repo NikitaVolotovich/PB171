@@ -39,19 +39,6 @@ F 3 "" H 4200 4200 50  0001 C CNN
 $EndComp
 Text Notes 5100 3600 0    50   ~ 0
 PWM TIM3_Ch2\n
-Text Notes 5100 3700 0    50   ~ 0
-PWM TIM1_Ch2\n
-$Comp
-L power:+3.3V #PWR?
-U 1 1 608CD99D
-P 4600 2700
-F 0 "#PWR?" H 4600 2550 50  0001 C CNN
-F 1 "+3.3V" H 4615 2873 50  0000 C CNN
-F 2 "" H 4600 2700 50  0001 C CNN
-F 3 "" H 4600 2700 50  0001 C CNN
-	1    4600 2700
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:Q_NMOS_DGS Q1
 U 1 1 608D1412
@@ -108,17 +95,6 @@ F 3 "~" H 7300 3260 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6400 3150 7000 3150
-$Comp
-L power:+3.3V #PWR?
-U 1 1 608DD242
-P 7400 3700
-F 0 "#PWR?" H 7400 3550 50  0001 C CNN
-F 1 "+3.3V" V 7415 3828 50  0000 L CNN
-F 2 "" H 7400 3700 50  0001 C CNN
-F 3 "" H 7400 3700 50  0001 C CNN
-	1    7400 3700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7400 3700 7300 3700
 Wire Wire Line
@@ -149,7 +125,7 @@ F 1 "D" V 6955 3670 50  0001 C CNN
 F 2 "" H 7000 3750 50  0001 C CNN
 F 3 "~" H 7000 3750 50  0001 C CNN
 	1    7000 3750
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	7000 3150 7000 3600
@@ -161,4 +137,170 @@ Wire Wire Line
 Connection ~ 7000 4100
 Wire Wire Line
 	7000 4100 7300 4100
+$Comp
+L Device:R R5
+U 1 1 6088CFCD
+P 4100 2650
+F 0 "R5" H 4170 2696 50  0000 L CNN
+F 1 "100K" H 4170 2605 50  0000 L CNN
+F 2 "" V 4030 2650 50  0001 C CNN
+F 3 "~" H 4100 2650 50  0001 C CNN
+	1    4100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2750 2450 2800
+$Comp
+L power:GND #PWR?
+U 1 1 608973F2
+P 1900 3100
+F 0 "#PWR?" H 1900 2850 50  0001 C CNN
+F 1 "GND" H 1905 2927 50  0000 C CNN
+F 2 "" H 1900 3100 50  0001 C CNN
+F 3 "" H 1900 3100 50  0001 C CNN
+	1    1900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 608973F8
+P 1700 2500
+F 0 "#PWR?" H 1700 2350 50  0001 C CNN
+F 1 "+5V" H 1715 2673 50  0000 C CNN
+F 2 "" H 1700 2500 50  0001 C CNN
+F 3 "" H 1700 2500 50  0001 C CNN
+	1    1700 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2500 2800 2500
+Text Label 2800 2450 0    50   ~ 0
++3.3V
+$Comp
+L Device:CP1 C1
+U 1 1 60897400
+P 1900 2650
+F 0 "C1" H 2015 2696 50  0000 L CNN
+F 1 "10 uF" H 2015 2605 50  0000 L CNN
+F 2 "" H 1900 2650 50  0001 C CNN
+F 3 "~" H 1900 2650 50  0001 C CNN
+	1    1900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117 DA1
+U 1 1 60897406
+P 2450 2500
+F 0 "DA1" H 2450 2742 50  0000 C CNN
+F 1 "AMS1117" H 2450 2651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2450 2700 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2550 2250 50  0001 C CNN
+	1    2450 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 2500
+Wire Wire Line
+	1900 2500 1700 2500
+Wire Wire Line
+	1900 2500 2150 2500
+$Comp
+L Device:R R3
+U 1 1 6089740F
+P 2800 2650
+F 0 "R3" H 2870 2696 50  0000 L CNN
+F 1 "130" H 2870 2605 50  0000 L CNN
+F 2 "" V 2730 2650 50  0001 C CNN
+F 3 "~" H 2800 2650 50  0001 C CNN
+	1    2800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60897415
+P 2800 2950
+F 0 "R4" H 2870 2996 50  0000 L CNN
+F 1 "180" H 2870 2905 50  0000 L CNN
+F 2 "" V 2730 2950 50  0001 C CNN
+F 3 "~" H 2800 2950 50  0001 C CNN
+	1    2800 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2800 2450 2800
+Connection ~ 2800 2800
+Connection ~ 2450 2800
+Wire Wire Line
+	1900 2800 1900 3100
+$Comp
+L Device:CP1 C2
+U 1 1 6089741F
+P 3200 2800
+F 0 "C2" H 3315 2846 50  0000 L CNN
+F 1 "22 uF" H 3315 2755 50  0000 L CNN
+F 2 "" H 3200 2800 50  0001 C CNN
+F 3 "~" H 3200 2800 50  0001 C CNN
+	1    3200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3100 3200 3100
+Connection ~ 2800 3100
+Connection ~ 2800 2500
+Wire Wire Line
+	2800 2500 3200 2500
+Connection ~ 1900 3100
+Wire Wire Line
+	1900 3100 2800 3100
+$Comp
+L Device:C C3
+U 1 1 6089742B
+P 3650 2800
+F 0 "C3" H 3765 2846 50  0000 L CNN
+F 1 "470 uF" H 3765 2755 50  0000 L CNN
+F 2 "" H 3688 2650 50  0001 C CNN
+F 3 "~" H 3650 2800 50  0001 C CNN
+	1    3650 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2650 3200 2500
+Connection ~ 3200 2500
+Wire Wire Line
+	3200 2950 3200 3100
+Connection ~ 3200 3100
+Wire Wire Line
+	3650 3100 3650 2950
+Wire Wire Line
+	3200 3100 3650 3100
+Wire Wire Line
+	3650 2650 3650 2500
+Wire Wire Line
+	3200 2500 3650 2500
+Wire Wire Line
+	3650 2500 4100 2500
+Connection ~ 3650 2500
+Wire Wire Line
+	3650 3100 3650 4200
+Connection ~ 3650 3100
+Wire Wire Line
+	3650 4200 4200 4200
+Connection ~ 4200 4200
+Wire Wire Line
+	4600 2700 4600 2500
+Wire Wire Line
+	4600 2500 4100 2500
+Connection ~ 4100 2500
+Wire Wire Line
+	4100 2800 4100 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 6089A502
+P 7400 3700
+F 0 "#PWR?" H 7400 3550 50  0001 C CNN
+F 1 "+5V" H 7415 3873 50  0000 C CNN
+F 2 "" H 7400 3700 50  0001 C CNN
+F 3 "" H 7400 3700 50  0001 C CNN
+	1    7400 3700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

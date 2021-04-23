@@ -185,8 +185,8 @@ F 3 "~" H 5800 4000 50  0001 C CNN
 	1    5800 4000
 	0    1    1    0   
 $EndComp
-Text Label 5400 3400 0    50   ~ 0
-R4=R6=680
+Text Label 5350 3400 0    50   ~ 0
+R4=R5=150
 Text Label 5250 3600 0    50   ~ 0
 TIM14_Ch1
 Text Label 5200 3800 0    50   ~ 0
@@ -194,7 +194,7 @@ TIM3_Ch1
 Text Label 5150 4000 0    50   ~ 0
 TIM3_Ch2
 Wire Wire Line
-	3600 2450 4100 2450
+	3600 2450 4600 2450
 Wire Wire Line
 	2400 2700 2400 2750
 $Comp
@@ -323,27 +323,9 @@ Wire Wire Line
 	3600 2600 3600 2450
 Wire Wire Line
 	3150 2450 3600 2450
+Wire Wire Line
+	3600 2450 4550 2450
 Connection ~ 3600 2450
 Text Label 5450 4150 0    50   ~ 0
-R5=510
-$Comp
-L Device:R R7
-U 1 1 6087FB10
-P 4100 2650
-F 0 "R7" H 4170 2696 50  0000 L CNN
-F 1 "100K" H 4170 2605 50  0000 L CNN
-F 2 "" V 4030 2650 50  0001 C CNN
-F 3 "~" H 4100 2650 50  0001 C CNN
-	1    4100 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 2500 4100 2450
-Connection ~ 4100 2450
-Wire Wire Line
-	4100 2450 4600 2450
-Wire Wire Line
-	4100 2450 4550 2450
-Wire Wire Line
-	4100 2800 4100 2900
+R6=200
 $EndSCHEMATC
